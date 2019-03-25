@@ -1,25 +1,58 @@
 fileFormatVersion: 2
-guid: 717e667d9072434458f9f923c7e101f7
+guid: db345241b6bd0b54d82d7684f1056ccb
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2100000: Material.008
-    2100002: Material.002
-    2100004: Material.007
-    2100006: Material.003
-    2100008: Material.006
-    2100010: Material.005
-    2100012: Material.004
-    2100014: Material.009
-    2100016: Material.001
-    2300000: default
-    3300000: default
-    4300000: default
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    100002: n0b0
+    100004: n1b1
+    100006: n2b3
+    100008: n3b2
+    100010: n4b4
+    100012: n5b5
+    100014: n6b6
+    100016: n7b7
+    400000: //RootNode
+    400002: n0b0
+    400004: n1b1
+    400006: n2b3
+    400008: n3b2
+    400010: n4b4
+    400012: n5b5
+    400014: n6b6
+    400016: n7b7
+    2100000: m0
+    2100002: m1
+    2100004: m2
+    2100006: m3
+    2100008: m4
+    2100010: m5
+    2100012: m6
+    2100014: m7
+    2300000: n0b0
+    2300002: n1b1
+    2300004: n2b3
+    2300006: n3b2
+    2300008: n4b4
+    2300010: n5b5
+    2300012: n6b6
+    2300014: n7b7
+    3300000: n0b0
+    3300002: n1b1
+    3300004: n2b3
+    3300006: n3b2
+    3300008: n4b4
+    3300010: n5b5
+    3300012: n6b6
+    3300014: n7b7
+    4300000: n0b0
+    4300002: n1b1
+    4300004: n2b3
+    4300006: n3b2
+    4300008: n4b4
+    4300010: n5b5
+    4300012: n6b6
+    4300014: n7b7
   externalObjects: {}
   materials:
     importMaterials: 1
