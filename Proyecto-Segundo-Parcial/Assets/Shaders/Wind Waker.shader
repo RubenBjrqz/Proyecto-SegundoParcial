@@ -1,8 +1,8 @@
 ﻿Shader "Custom/Shader wind waker" {
 	Properties{
-		_Color("Color", Color) = (1,1,1,1) //Color multiplied to the texture
-		_MainTex("Albedo (RGB)", 2D) = "white" {} //Texture
-	_CelShadingBlurWidth("Cell Shading Blur Width", Range(0,2)) = 0.2 //Blur between thresholds
+		_Color("Color", Color) = (1,1,1,1) 
+		_MainTex("Albedo (RGB)", 2D) = "white" {} 
+	_CelShadingBlurWidth("Cell Shading Blur Width", Range(0,2)) = 0.2 
 	}
 		SubShader{
 		Tags{ "RenderType" = "Opaque" }
@@ -33,23 +33,21 @@
 
 	fixed4 LightingToon(SurfaceOutput s, fixed3 lightDir,fixed atten)
 	{
-		half NdotL = dot(s.Normal, lightDir);  //Value between 0 and 1
+		half NdotL = dot(s.Normal, lightDir);  
 
 		half cel;
 
-		/// 0 | threshold 1  |  blur  | threshold 2 | 1
-		/// 0 |**************|<- .5 ->|xxxxxxxxxxxxx| 1
 
-		if (NdotL < 0.5 - _CelShadingBlurWidth / 2)                                         // Outside of the blur but dark
+		if (NdotL < 0.5 - _CelShadingBlurWidth / 2)                                         
 			cel = 0;
-		else if (NdotL > 0.5 + _CelShadingBlurWidth / 2)                                    // Outside of the blur but lit
+		else if (NdotL > 0.5 + _CelShadingBlurWidth / 2)                                    
 			cel = 1;
-		else                                                                                // Inside of the blur 
+		else                                                                                
 			cel = 1 - ((0.5 + _CelShadingBlurWidth / 2 - NdotL) / _CelShadingBlurWidth);
 
 		half4 c;
 
-		c.rgb = (cel + 0.3) / 2.5  * s.Albedo * _LightColor0.rgb * atten; // So it does not look too lit
+		c.rgb = (cel + 0.3) / 2.5  * s.Albedo * _LightColor0.rgb * atten; 
 		c.a = s.Alpha;
 
 		return c;
